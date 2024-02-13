@@ -105,6 +105,8 @@ df_filtered_level2 = pd.concat(L)
 
 The SubcategoryGenerator in UTME is essential for unsupervised taxonomy expansion, creating subcategories within predefined categories. For example, if the TaxonomyClassifier identifies a document under "Gender-based Hate Speech," the SubcategoryGenerator can generate subcategories like "Sexual Harassment Language" or "Body-shaming" based on the document content. This unsupervised approach enables the system to discover subtopics without labeled data, enhancing exploratory analysis and taxonomy development.
 
+Access df_filtered_level2 to see the mapping result for each document.
+
 6. **Graph-Based Analysis for Exploration:**
    - Leverage UTME's graph-based analysis to visually explore document relationships, aiding in the identification and monitoring of hate speech patterns.
 
@@ -118,6 +120,17 @@ sg.graph_export_cosmograph(df_filtered_level2)
 ![Graph - Hate Speech Analysis](https://raw.githubusercontent.com/Labic-ICMC-USP/UTME/main/tutoriais/hatespeech/graph_example.png "Graph - Hate Speech Analysis")
 
 The UTME also facilitates graph analysis through the generated nodes.csv and edges.csv files, allowing for exploratory analysis of the results. In this graph, each hate speech text serves as a vertex, and similar texts are connected. UTME generates connections by exploring both document similarity and the predefined hate speech taxonomy. For analyzing large graphs, the Cosmograph app is recommended, providing robust features for graph visualization and exploration.
+
+To navigate the taxonomy, we also suggest using TreeMaps:
+
+```python
+# Treemap
+import plotly.express as px
+df_tree = utme_hatespeech.df_filtered_level2[['text','level1','level2']]
+fig = px.treemap(df_tree, path=['level1', 'level2'],  color='level2',  color_continuous_scale='RdBu')
+fig.show()
+``` 
+![Graph - Hate Speech Analysis](https://raw.githubusercontent.com/Labic-ICMC-USP/UTME/main/tutoriais/hatespeech/treemap.png "TreeMap - Hate Speech Analysis")
 
 # UTME_HateSpeech Class
 
