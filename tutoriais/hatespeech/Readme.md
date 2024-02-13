@@ -1,4 +1,4 @@
-**Title: UTME for Hate Speech Detection and Monitoring**
+# UTME for Hate Speech Analsys
 
 In the ever-evolving landscape of online communication, the rise of hate speech has become a pressing concern. To address this challenge, UTME emerges as a powerful solution. This tutorial explores the motivation behind using UTME and the importance of automated mining and monitoring of hate speech texts.
 
