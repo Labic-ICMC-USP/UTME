@@ -15,3 +15,7 @@ Document classification within a custom internal hierarchical taxonomy is a prev
    - Constructs a graph based on document similarity for exploratory visual analysis and data sampling.
 
 ## Getting Started
+
+Read one of the tutorials to see the UTME in action.
+
+* [UTME for Hate Speech Analsys](https://github.com/Labic-ICMC-USP/UTME/tree/main/tutoriais/hatespeech): This tutorial explores the motivation behind using UTME and the importance of automated mining and monitoring of hate speech texts.
