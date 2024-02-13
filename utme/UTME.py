@@ -30,6 +30,6 @@ class UTME():
       """
       response = openai.ChatCompletion.create(
           messages = [{"role": "user", "content": prompt}],
-          **llm_options
+          **self.llm_options
       )
       return response
