@@ -2,6 +2,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.neighbors import kneighbors_graph
 import networkx as nx
 import pandas as pd
+pd.options.mode.chained_assignment = None
 
 class SubcategoryGenerator():
     def __init__(self, taxonomy_classifier, attempts=7):
