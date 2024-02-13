@@ -208,6 +208,21 @@ df_label_no['y_true'] = 'NO'
 
 df = pd.concat([df_label_yes,df_label_no])
 
+# Define context and taxonomy for hate speech analysis
+context = '''Hate speech refers to any form of communication that promotes prejudice, discrimination, or animosity against individuals or groups based on attributes such as race, ethnicity, religion, gender, sexual orientation, or other defining characteristics. Racial: Discriminatory language targeting a person's race or ethnicity. Religious: Prejudice or hostility based on someone's religious beliefs. Gender-based: Discrimination based on gender, often reinforcing traditional stereotypes. Sexual Orientation: Derogatory remarks about someone's sexual orientation. Disability-based: Offensive language related to a person's physical or mental abilities. Age-based: Discrimination based on a person's age, often manifesting as ageism. Nationality-based: Prejudice against individuals from a specific country or nationality. Class-based: Discrimination based on socioeconomic status or class. Appearance-based: Offensive remarks about a person's physical appearance. Language-based: Discriminatory language targeting a specific language or dialect. Political Affiliation: Prejudice based on a person's political beliefs or affiliation. Ideology-based: Discrimination related to a person's ideological views. Immigration Status: Discrimination based on a person's immigration or citizenship status. Body-shaming: Derogatory comments about a person's body size or shape. Educational Background: Discrimination based on a person's educational achievements or lack thereof. Refugees: Offensive language targeting individuals who are refugees or seeking asylum. Geographical Location: Discrimination based on a person's place of origin or residence. Weight-based: Offensive comments about a person's weight. Sexual Harassment Language: Offensive comments of a sexual nature that contribute to a hostile environment. Microaggressions: Subtle, often unintentional, expressions of prejudice or discrimination.'''
+
+taxonomy = '''0 NONE: The @DOCUMENT does not contain hate speech
+1 Racial Hate Speech
+2 Religious Hate Speech
+3 Gender-based Hate Speech
+4 Sexual Orientation Hate Speech
+5 Disability-based Hate Speech
+6 Class-based Hate Speech
+7 Political Hate Speech
+8 Age-based Hate Speech
+9 Appearance-based Hate Speech
+10 Nationality-based Hate Speech'''
+
 utme_hatespeech.start(df, context, taxonomy)
 ```
 
@@ -216,10 +231,10 @@ utme_hatespeech.start(df, context, taxonomy)
 
 ### Google Colab 1: LLM Server
 
-To get a hands-on experience with the UTME HateSpeech functionality and test its concepts, you can access the  Google Colab notebook [here](link_to_google_colab1). This notebook provides a simple Large Language Model (LLM) server setup to explore the basic capabilities of the UTME, allowing you to understand the Binary Classifier, Taxonomy Classifier, and Subcategory Generator. This serves as a preliminary step to familiarize yourself with the UTME HateSpeech workflow.
+To get a hands-on experience with the UTME HateSpeech functionality and test its concepts, you can access the  Google Colab notebook [here](https://colab.research.google.com/drive/1mvLCbjmTFU_Fn3YLgGarLEhN_pks2yNj?usp=sharing). This notebook provides a simple Large Language Model (LLM) server setup to explore the basic capabilities of the UTME, allowing you to understand the Binary Classifier, Taxonomy Classifier, and Subcategory Generator. This serves as a preliminary step to familiarize yourself with the UTME HateSpeech workflow.
 
 ### Google Colab 2: UTME HateSpeech Implementation and Experiment
 
-For a more comprehensive demonstration, the second Google Colab notebook [here](link_to_google_colab2) showcases the full implementation of the UTME_HateSpeech class. Additionally, a small experiment using hate speech texts available in the [Hugging Face Hate Speech dataset](https://huggingface.co/api/datasets/hate_speech18/) is included. This notebook guides you through applying UTME HateSpeech on real hate speech data, demonstrating the effectiveness of the solution in filtering, classifying, and expanding the taxonomy for a more detailed hate speech analysis.
+For a more comprehensive demonstration, the second Google Colab notebook [here](https://colab.research.google.com/drive/1O4jBqTHyHUSkslCWsAF5QvCz3awAt-Tj?usp=sharing) showcases the full implementation of the UTME_HateSpeech class. Additionally, a small experiment using hate speech texts available in the [Hugging Face Hate Speech dataset](https://huggingface.co/api/datasets/hate_speech18/) is included. This notebook guides you through applying UTME HateSpeech on real hate speech data, demonstrating the effectiveness of the solution in filtering, classifying, and expanding the taxonomy for a more detailed hate speech analysis.
 
 Feel free to explore these notebooks to gain practical insights into the UTME HateSpeech capabilities and witness its application in addressing hate speech challenges within textual datasets.
