@@ -1,3 +1,6 @@
+import json
+import openai
+
 class UTME():
 
     def __init__(self, llm_endpoint, llm_key, llm_options = {}):
