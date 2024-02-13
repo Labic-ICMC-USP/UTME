@@ -115,6 +115,7 @@ sg = SubcategoryGenerator(tc)
 sg.graph_generation(df_filtered_level2)
 sg.graph_export_cosmograph(df_filtered_level2)
 ``` 
+![Graph - Hate Speech Analysis](https://raw.githubusercontent.com/Labic-ICMC-USP/UTME/main/tutoriais/hatespeech/graph_example.png "Graph - Hate Speech Analysis")
 
 The UTME also facilitates graph analysis through the generated nodes.csv and edges.csv files, allowing for exploratory analysis of the results. In this graph, each hate speech text serves as a vertex, and similar texts are connected. UTME generates connections by exploring both document similarity and the predefined hate speech taxonomy. For analyzing large graphs, the Cosmograph app is recommended, providing robust features for graph visualization and exploration.
 
